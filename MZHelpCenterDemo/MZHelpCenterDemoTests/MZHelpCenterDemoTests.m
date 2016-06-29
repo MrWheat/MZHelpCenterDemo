@@ -2,10 +2,11 @@
 //  MZHelpCenterDemoTests.m
 //  MZHelpCenterDemoTests
 //
-//  Created by 麦子 on 16/6/29.
-//  Copyright © 2016年 麦子. All rights reserved.
+//  Created by 麦子 on 15/10/23.
+//  Copyright (c) 2015年 麦子. All rights reserved.
 //
 
+#import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 
 @interface MZHelpCenterDemoTests : XCTestCase
@@ -26,7 +27,7 @@
 
 - (void)testExample {
     // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
+    XCTAssert(YES, @"Pass");
 }
 
 - (void)testPerformanceExample {
