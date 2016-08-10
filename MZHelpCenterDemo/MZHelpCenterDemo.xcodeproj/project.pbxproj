@@ -12,7 +12,7 @@
 		D8951AFD1BD9F647008B10C9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8951AFC1BD9F647008B10C9 /* Images.xcassets */; };
 		D8951B001BD9F647008B10C9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8951AFE1BD9F647008B10C9 /* LaunchScreen.xib */; };
 		D8951B0C1BD9F648008B10C9 /* MZHelpCenterDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D8951B0B1BD9F648008B10C9 /* MZHelpCenterDemoTests.m */; };
-		D8951B181BD9F67D008B10C9 /* MZHelpCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = D8951B171BD9F67D008B10C9 /* MZHelpCenter.m */; };
+		D8CC48361D5ACC0A0032A8C4 /* MZHelpCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = D8CC48351D5ACC0A0032A8C4 /* MZHelpCenter.m */; };
 		D8E97B271CD2077D002D652D /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8E97B261CD2077D002D652D /* TestViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -37,8 +37,8 @@
 		D8951B051BD9F648008B10C9 /* MZHelpCenterDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MZHelpCenterDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8951B0A1BD9F648008B10C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D8951B0B1BD9F648008B10C9 /* MZHelpCenterDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZHelpCenterDemoTests.m; sourceTree = "<group>"; };
-		D8951B161BD9F67D008B10C9 /* MZHelpCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZHelpCenter.h; sourceTree = "<group>"; };
-		D8951B171BD9F67D008B10C9 /* MZHelpCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZHelpCenter.m; sourceTree = "<group>"; };
+		D8CC48341D5ACC0A0032A8C4 /* MZHelpCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZHelpCenter.h; sourceTree = "<group>"; };
+		D8CC48351D5ACC0A0032A8C4 /* MZHelpCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZHelpCenter.m; sourceTree = "<group>"; };
 		D8E97B251CD2077D002D652D /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
 		D8E97B261CD2077D002D652D /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -123,8 +123,8 @@
 		D8951B151BD9F658008B10C9 /* MZHelpCenter */ = {
 			isa = PBXGroup;
 			children = (
-				D8951B161BD9F67D008B10C9 /* MZHelpCenter.h */,
-				D8951B171BD9F67D008B10C9 /* MZHelpCenter.m */,
+				D8CC48341D5ACC0A0032A8C4 /* MZHelpCenter.h */,
+				D8CC48351D5ACC0A0032A8C4 /* MZHelpCenter.m */,
 			);
 			path = MZHelpCenter;
 			sourceTree = "<group>";
@@ -229,9 +229,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8951B181BD9F67D008B10C9 /* MZHelpCenter.m in Sources */,
 				D8951AFB1BD9F647008B10C9 /* MZAppDelegate.m in Sources */,
 				D8E97B271CD2077D002D652D /* TestViewController.m in Sources */,
+				D8CC48361D5ACC0A0032A8C4 /* MZHelpCenter.m in Sources */,
 				D8951AF81BD9F647008B10C9 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

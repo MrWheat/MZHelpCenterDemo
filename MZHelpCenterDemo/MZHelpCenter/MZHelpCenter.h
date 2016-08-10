@@ -44,6 +44,17 @@
 + (NSString *)currentTimeSinceToday:(NSString *)timeString type:(NSString *)type;
 
 /**
+ *  日期转时间戳
+ *
+ *  @param timeString 日期字符串 例：@"2016年4月30日1时1分1秒1"
+ *
+ *  @param type 日期格式与timeString对应 例：@"yyyy年MM月dd日HH时mm分ss秒s"
+ *
+ *  @return unix时间戳
+ */
++ (NSString *)timeToUnixDate:(NSString *)timeString type:(NSString *)type;
+
+/**
  *  Unix时间戳转具体日期
  *
  *  @param timeString Unix时间戳

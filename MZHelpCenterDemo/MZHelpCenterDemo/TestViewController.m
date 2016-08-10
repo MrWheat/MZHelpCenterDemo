@@ -19,6 +19,25 @@
     [super viewDidLoad];
     [self initViewController];
     [self testMethod];
+    [self createUI];
+}
+
+- (void)createUI {
+    UILabel *todayUnix = [[UILabel alloc] initWithFrame:CGRectMake(0, 100, self.view.frame.size.width, 30)];
+    todayUnix.textAlignment = NSTextAlignmentCenter;
+    [self.view addSubview:todayUnix];
+    
+    UILabel *todayDate = [[UILabel alloc] initWithFrame:CGRectMake(0, 200, self.view.frame.size.width, 30)];
+    todayDate.textAlignment = NSTextAlignmentCenter;
+    [self.view addSubview:todayDate];
+    
+    UILabel *dateSinceToday = [[UILabel alloc] initWithFrame:CGRectMake(0, 300, self.view.frame.size.width, 30)];
+    dateSinceToday.textAlignment = NSTextAlignmentCenter;
+    [self.view addSubview:dateSinceToday];
+    
+    todayUnix.text = [MZHelpCenter currentTime];
+    todayDate.text = [MZHelpCenter currentDateWithType:@"yyyy年MM月dd日"];
+    dateSinceToday.text = [MZHelpCenter circleCreateTime:@"1470797345"];
 }
 
 - (void)initViewController {
@@ -26,9 +45,7 @@
 }
 
 - (void)testMethod {
-    NSLog(@"%@", [MZHelpCenter currentTime]);
-    NSLog(@"%@", [MZHelpCenter currentDateWithType:@"yyyy年MM月dd日"]);
-    NSLog(@"%@", [MZHelpCenter currentTimeSinceToday:@"2016年4月30日1时1分1秒1" type:@"yyyy年MM月dd日HH时mm分ss秒s"]);
+    // 需要真机环境
     [MZHelpCenter systemShake];
     [MZHelpCenter createSystemSoundWithName:@"ReceivedMessage" soundType:@"caf"];
 }

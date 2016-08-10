@@ -13,8 +13,12 @@
 
 #pragma mark -- 返回字符串宽度
 + (CGFloat)textWidthWithText:(NSString *)text font:(UIFont *)font {
-    CGSize size = [text boundingRectWithSize:CGSizeMake(CGFLOAT_MAX, 25) options:NSStringDrawingTruncatesLastVisibleLine|NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading attributes:@{NSFontAttributeName:font} context:nil].size;
-    return size.width;
+    if (text == nil || text.length <= 0) {
+        return 0;
+    } else {
+        CGSize size = [text boundingRectWithSize:CGSizeMake(CGFLOAT_MAX, 25) options:NSStringDrawingTruncatesLastVisibleLine|NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading attributes:@{NSFontAttributeName:font} context:nil].size;
+        return size.width + 1;
+    }
 }
 
 #pragma mark -- 返回字符串高度
@@ -23,7 +27,7 @@
         return 0;
     } else {
         CGSize size = [text boundingRectWithSize:CGSizeMake(width, CGFLOAT_MAX) options:NSStringDrawingTruncatesLastVisibleLine|NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading attributes:@{NSFontAttributeName:font} context:nil].size;
-        return size.height;
+        return size.height + 1;
     }
 }
 
@@ -38,6 +42,15 @@
     NSInteger min = interval/60;
     interval %= 60;
     return [NSString stringWithFormat:@"剩余:%02ld时%02ld分%02ld秒",hour, min, interval];
+}
+
+#pragma mark -- 日期转时间戳
++ (NSString *)timeToUnixDate:(NSString *)timeString type:(NSString *)type {
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    formatter.dateFormat = type;
+    NSDate *date = [formatter dateFromString:timeString];
+    NSInteger interval = [date timeIntervalSince1970];
+    return [NSString stringWithFormat:@"%ld",interval];
 }
 
 #pragma mark -- Unix时间戳转具体日期
