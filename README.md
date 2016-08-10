@@ -4,6 +4,7 @@
 
 持续更新ing。
 
+```Objective-c
 /**
  *  获取某个字符串在控件上所占的宽度
  *
@@ -118,3 +119,4 @@
  *  @param dict 需要打印的字典
  */
 + (void)createModelWithDictionary:(NSDictionary *)dict;
+```
