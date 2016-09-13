@@ -107,6 +107,13 @@
 + (BOOL)isLegalMobile:(NSString *)mobile;
 
 /**
+ *  打印数据模型
+ *
+ *  @param dict 需要打印的字典
+ */
++ (void)createModelWithDictionary:(NSDictionary *)dict;
+
+/**
  *  调用系统的震动，需要真机
  */
 + (void)systemShake;
@@ -118,12 +125,5 @@
  *  @param soundType 如：@"caf"
  */
 + (void)createSystemSoundWithName:(NSString *)soundName soundType:(NSString *)soundType;
-
-/**
- *  打印数据模型
- *
- *  @param dict 需要打印的字典
- */
-+ (void)createModelWithDictionary:(NSDictionary *)dict;
 
 @end
